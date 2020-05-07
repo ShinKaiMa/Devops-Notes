@@ -25,14 +25,14 @@ $ sudo apt upgrade
 ```
 (使用帶有sudo前綴指令, 可以以最高權限運行指令, 會要求輸入當下user的密碼)
 
-## 安裝sssh
+## 安裝ssh
 ```
 $ sudo apt-get install ssh
 ```
 安裝ssh, 以利後續在關閉GUI的情況下, 使用putty遠端登入, 以下指令的方式進行後續開發
 
 ## 使用putty遠端連線
-使用以下指令尋找VirtualBox中Ubuntu的IP位置
+使用以下指令尋找客體OS - Ubuntu的IP位置
 ```
 $ ip add
 ```
@@ -40,12 +40,14 @@ $ ip add
 找出enp0s3網卡的IP位置
 ![mapport](../pngs/linux/ubuntuport.png)
 
-使用找出Windows(host端), 實際VirtualBox Host 的IP位置
+在Windows上, 使用下列指令找出Windows(host端OS), 實際VirtualBox Host 的IP位置
+```
+ipconfig
+```
 ![vb_mapport](../pngs/linux/win_port_find.png)
 
-打開VirtualBox管理介面, 將上述查詢到的port以下圖方式設定,將Ubuntu的 22 port 導到 Windows上, 主機IP填入實際VirtualBox Host 的IP位置, 客體IP填入Ubuntu虛擬機中, enp0s3網卡的IP位置
+打開VirtualBox管理介面, 將上述查詢到的port以下圖方式設定,將Ubuntu的 22 port 映射到 Windows的 22 port上, 主機IP填入實際VirtualBox Host 的IP位置, 客體IP填入Ubuntu虛擬機中, enp0s3網卡的IP位置
 ![vb_mapport](../pngs/linux/vb_port_mapping.png)
-
 
 
 ```
