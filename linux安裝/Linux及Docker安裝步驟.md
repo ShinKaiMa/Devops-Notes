@@ -1,9 +1,12 @@
-Linux安裝步驟
+Linux及Docker安裝步驟
 =======
 
 
 ## 使用VirtualBox ^6.0安裝Ubuntu 18.04
-[安裝莊學]: https://murphymind.blogspot.com/2020/01/windows-virtualbox-ubuntu-1804.html
+[VirtualBox及Ubuntu安裝教學](https://murphymind.blogspot.com/2020/01/windows-virtualbox-ubuntu-1804.html)
+
+先使用上述文章的教學步驟, 安裝VirtualBox以及Ubuntu 
+(本文章教學, Linux安裝部分待補先使用下列文章代替)
 文章內安裝安裝 VirtualBox Guest Additions的部分可暫時略過不裝, 該用途為讓VirtualBox的視窗可以適配全螢幕, 支持雙向剪貼功能、共享目錄功能, 若需要用到GUI來操作Ubuntu的話建議安裝, 但後續開發上, 建議關掉Ubuntu的GUI(關閉方式後續安裝步驟說明會提到), 以減少資源的開銷(GUI會吃一些運算、I/O資源).
 
 ## 設置root的密碼
@@ -42,8 +45,6 @@ $ ip add
 
 打開VirtualBox管理介面, 將上述查詢到的port以下圖方式設定,將Ubuntu的 22 port 導到 Windows上, 主機IP填入實際VirtualBox Host 的IP位置, 客體IP填入Ubuntu虛擬機中, enp0s3網卡的IP位置
 ![vb_mapport](../pngs/linux/vb_port_mapping.png)
-
-
 
 
 
